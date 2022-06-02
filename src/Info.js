@@ -4,14 +4,16 @@ function Info() {
   const [user, setUser] = useState({});
 
   const getUser = async () => {
-    axios.get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
-      const person = res.data[Math.floor(Math.random() * 10)];
-      const newPerson = {
-        name: person.name,
-        website: person.website,
-      };
-      setUser(newPerson);
-    });
+    await axios
+      .get(`https://jsonplaceholder.typicode.com/users`)
+      .then((res) => {
+        const person = res.data[Math.floor(Math.random() * 10)];
+        const newPerson = {
+          name: person.name,
+          website: person.website,
+        };
+        setUser(newPerson);
+      });
   };
 
   useEffect(() => {
