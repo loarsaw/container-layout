@@ -1,10 +1,12 @@
 import React from "react";
 import UserInfo from "./Info";
-
+import UserLoader from "./UserLoader";
 function App() {
   return (
     <>
-      <UserInfo />
+      <UserLoader>
+        <UserInfo />
+      </UserLoader>
     </>
   );
 }

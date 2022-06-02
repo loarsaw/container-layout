@@ -17,6 +17,9 @@ body {
   margin: 0 auto;
 }
 
+.loading{
+  color: #fff;
+}
 .card {
   position: relative;
   width: 300px;
