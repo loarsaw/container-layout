@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-function Info() {
+function UserLoader() {
   const [user, setUser] = useState({});
 
-<<<<<<< Updated upstream
   const getUser = async () => {
     await axios
       .get(`https://jsonplaceholder.typicode.com/users`)
@@ -20,25 +19,7 @@ function Info() {
   useEffect(() => {
     getUser();
   }, []);
-
-=======
->>>>>>> Stashed changes
-  return (
-    <div class="box">
-      <div class="card">
-        <div class="imgBx">
-          <img src="https://picsum.photos/400/500" alt="images" />
-        </div>
-        <div class="details">
-          <h2>
-            {user.name}
-            <br />
-            <span>{user.website}</span>
-          </h2>
-        </div>
-      </div>
-    </div>
-  );
+  return <div>UserLoader</div>;
 }
 
-export default Info;
+export default UserLoader;
